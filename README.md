@@ -1,6 +1,6 @@
-# React Pizza
+# 🍕 React Pizza 🍕
 
-### Технологии:
+### ⚒️ Технологии:
 
 - HTML
 - JavaScript
