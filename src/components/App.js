@@ -1,7 +1,10 @@
+import React from "react";
 import Header from "./Header";
 import Categories from "./Categories";
 import Sort from "./Sort";
 import PizzaBlock from "./PizzaBlock";
+
+import pizzas from "../assets/pizzas.json";
 
 function App() {
   return (
