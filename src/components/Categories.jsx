@@ -5,10 +5,6 @@ function Categories() {
 
   const [activeIndex, setActiveIndex] = React.useState(0);
 
-  const clickActive = (index) => {
-    setActiveIndex(index);
-  };
-
   return (
     <div className="categories">
       <ul>
@@ -16,7 +12,7 @@ function Categories() {
           return (
             <li
               key={index}
-              onClick={() => clickActive(index)}
+              onClick={() => setActiveIndex(index)}
               className={activeIndex == index ? "active" : ""}
             >
               {categor}

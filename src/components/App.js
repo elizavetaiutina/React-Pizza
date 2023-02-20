@@ -18,12 +18,9 @@ function App() {
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
-            <PizzaBlock title="Мексиканская" price={350} />
-            <PizzaBlock title="Пепперони" price={325} />
-            <PizzaBlock title="Чизбургер-пицца" price={395} />
-            <PizzaBlock title="Пепперони" price={325} />
-            <PizzaBlock title="Мексиканская" price={350} />
-            <PizzaBlock title="Пепперони" price={325} />
+            {pizzas.map((obj, index) => {
+              return <PizzaBlock key={index} {...obj} />;
+            })}
           </div>
         </div>
       </div>
