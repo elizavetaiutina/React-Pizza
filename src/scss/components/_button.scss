@@ -12,6 +12,10 @@
   border: 1px solid transparent;
   @include noselect();
 
+  @media (max-width: 540px) {
+    min-width: 75px;
+  }
+
   &,
   span {
     color: #fff;
@@ -93,6 +97,10 @@
     background-color: rgba(255, 255, 255, 0.25);
     margin-left: 14px;
     margin-right: 14px;
+
+    @media (max-width: 590px) {
+      transform: rotate(90deg);
+    }
   }
 
   &--add {
@@ -129,11 +137,20 @@
     }
   }
 
+  &__wrapper {
+    display: flex;
+  }
+
   &--cart {
     display: flex;
     align-items: center;
     line-height: 23px;
     padding: 12px 25px;
+
+    @media (max-width: 590px) {
+      flex-direction: column;
+      padding: 10px 10px;
+    }
 
     svg {
       margin-right: 8px;

@@ -19,10 +19,11 @@ function Home() {
       .catch((err) => {
         console.log(`Ошибка: ${err}.`);
       });
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
+    <div className="container">
       <div className="content__top">
         <Categories />
         <Sort />
@@ -37,7 +38,7 @@ function Home() {
               return <PizzaBlock key={index} {...obj} />;
             })}
       </div>
-    </>
+    </div>
   );
 }
 
