@@ -9,13 +9,14 @@ import NotFound from "../pages/NotFound";
 import "../scss/app.scss";
 
 function App() {
+  const [valueSearch, setValueSearch] = React.useState("");
+
   return (
     <div className="wrapper">
-      <Header />
+      <Header valueSearch={valueSearch} setValueSearch={setValueSearch} />
       <div className="content">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/React-Pizza" element={<Home />} />
+          <Route path="/" element={<Home valueSearch={valueSearch} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

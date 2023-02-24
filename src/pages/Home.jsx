@@ -5,7 +5,7 @@ import Sort from "../components/Sort";
 import PizzaBlock from "../components/PizzaBlock";
 import Skeleton from "../components/PizzaBlock/Skeleton";
 
-function Home() {
+function Home({ valueSearch }) {
   const [arrPizzas, setArrPizzas] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -33,6 +33,16 @@ function Home() {
     window.scrollTo(0, 0);
   }, [categoryId, sortType]);
 
+  const skeletons = [...new Array(6)].map((_, index) => {
+    return <Skeleton key={index} />;
+  });
+
+  const pizzas = arrPizzas
+    .filter((obj) => obj.title.toLowerCase().includes(valueSearch.toLowerCase()))
+    .map((obj, index) => {
+      return <PizzaBlock key={index} {...obj} />;
+    });
+
   return (
     <div className="container">
       <div className="content__top">
@@ -40,15 +50,7 @@ function Home() {
         <Sort value={sortType} onChangeSort={(index) => setSortType(index)} />
       </div>
       <h2 className="content__title">Все пиццы</h2>
-      <div className="content__items">
-        {isLoading
-          ? [...new Array(6)].map((_, index) => {
-              return <Skeleton key={index} />;
-            })
-          : arrPizzas.map((obj, index) => {
-              return <PizzaBlock key={index} {...obj} />;
-            })}
-      </div>
+      <div className="content__items"> {isLoading ? skeletons : pizzas}</div>
     </div>
   );
 }

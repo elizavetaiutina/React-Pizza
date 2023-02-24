@@ -15,7 +15,7 @@
   }
 
   @media (max-width: 440px) {
-    width: calc(100vw - 80px);
+    width: calc(100vw - 100px);
   }
 }
 
@@ -26,4 +26,18 @@
   position: absolute;
   left: 14px;
   top: 12px;
+}
+
+.deleteIcon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
