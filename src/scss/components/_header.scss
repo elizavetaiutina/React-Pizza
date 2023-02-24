@@ -4,10 +4,25 @@
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
 
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width: 660px) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 
   &__logo {
