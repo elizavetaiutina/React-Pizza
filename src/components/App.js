@@ -17,6 +17,7 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<Home valueSearch={valueSearch} />} />
+          <Route path="/React-pizza" element={<Home valueSearch={valueSearch} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
