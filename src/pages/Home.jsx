@@ -10,14 +10,18 @@ function Home() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   const [categoryId, setCategoryId] = React.useState(0);
-  const [sortType, setSortType] = React.useState(0);
+  const [sortType, setSortType] = React.useState({ name: "популярности", property: "-rating" });
 
   React.useEffect(() => {
     setIsLoading(true);
 
-    const categoryUrl = `${categoryId > 0 ? `category=${categoryId}` : ""}`;
+    const categoryUrl = categoryId > 0 ? `category=${categoryId}` : "";
+    const orderUrl = sortType.property.includes("-") ? "desc" : "asc";
+    const sortUrl = sortType.property.replace("-", "");
 
-    fetch(`https://63f763ae833c7c9c6082ef1d.mockapi.io/items?${categoryUrl}`)
+    fetch(
+      `https://63f763ae833c7c9c6082ef1d.mockapi.io/items?${categoryUrl}&sortBy=${sortUrl}&order=${orderUrl}`
+    )
       .then((res) => res.json())
       .then((arr) => {
         setArrPizzas(arr);
@@ -27,7 +31,7 @@ function Home() {
         console.log(`Ошибка: ${err}.`);
       });
     window.scrollTo(0, 0);
-  }, [categoryId]);
+  }, [categoryId, sortType]);
 
   return (
     <div className="container">
