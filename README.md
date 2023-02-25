@@ -1,10 +1,16 @@
 # Проект: Pizza 🍕
 
-### GitHub Pages:
+---
 
-[https://elizavetaiutina.github.io/React-Pizza/]
+## GitHub Pages:
 
-### ⚒️ Технологии:
+### https://elizavetaiutina.github.io/React-Pizza/
+
+## Описание проекта
+
+Проект представляет собой фронтенд часть интернет-магазина пиццерии на ReactJS. В проекте созданы компоненты, страницы, реализованы сортировка, поиск, пагинация, фильтрация и запросы на бэкенд.
+
+## Технологии
 
 - HTML
 - JavaScript
@@ -12,26 +18,16 @@
 - Prettier (форматирование кода)
 - CSS-Modules / SCSS (стилизация)
 
+## Особенности
+
+Проект запускается локально по адресу http://localhost:3000/ путем клонирования данного репозитория и последовательного запуска команд в терминале (должны быть установлены программы Git, NodeJS и менеджер пакетов npm):
+
+```bash
+git clone git@github.com:elizavetaiutina/React-Pizza.git
+cd mesto
+npm install
+npm run start
+```
 ---
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+В дальнейшем планируется доработка функционала в рамках следующих спринтов
