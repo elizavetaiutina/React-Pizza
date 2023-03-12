@@ -26,7 +26,7 @@
 
 ```bash
 git clone git@github.com:elizavetaiutina/React-Pizza.git
-cd mesto
+cd React-Pizza
 npm install
 npm run start
 ```
